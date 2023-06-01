@@ -1,0 +1,46 @@
+<canvas id="myCanvas" width="600" height="400"></canvas>
+<script>
+	var tela = document.getElementById("myCanvas");
+	var pincel = tela.getContext("2d");
+
+	var desenharTexto = function(texto, x, y){
+		pincel.strokeText(texto,x,y);
+	}
+
+	var desenharRetangulo = function(x, y, largura, altura){
+		pincel.fillRect(x, y, largura, altura);
+	}
+
+	var desenharBorda = function(texto, xTexto, yTexto, xRect, yRect, largura, altura){
+		desenharTexto(texto, xTexto, yTexto);
+		desenharRetangulo(xRect, yRect, largura, altura);
+
+	}
+
+	pincel.fillStyle = "red";
+	
+	// Borda Esquerda
+	desenharBorda(" <-- B o r d a  E s q u e r d a", 10,200, 0, 0, 1, 400);
+
+	// Borda Direita
+	desenharBorda("B o r d a  D i r e i t a -->",510,200, 599, 0, 600, 400);
+
+	// Borda Superior
+	desenharBorda("B o r d a  S u p e r i o r", 300,30, 0, 0, 600, 1);
+
+	// Borda Inferior
+	desenharBorda("B o r d a  I n f e r i o r",300,370, 0, 399, 600, 400);
+
+	pincel.fillStyle = "blue";
+	pincel.beginPath();
+	pincel.moveTo(300,100);
+	pincel.lineTo(200,280);
+	pincel.lineTo(400,280);
+	pincel.fill();
+
+	pincel.fillStyle = "yellow";
+	// pincel.beginPath();
+	pincel.arc(330,210,150, 0, 2*Math.PI);
+	pincel.fill();
+
+</script>

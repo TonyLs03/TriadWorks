@@ -1,0 +1,71 @@
+<meta charset="UTF-8">
+<script>
+	var ano = 2023;
+	var diasDoAno = 365;
+
+	var idadeGuilherme = 8;
+	var idadeNahan = 8;
+	var idadeWilliam = 3;
+	var idadeRafael = 31;
+	var idadeLina = 32;
+
+	var diasGuilherme = idadeGuilherme*diasDoAno;
+	var diasNahan = idadeNahan*diasDoAno;
+	var diasWilliam = idadeWilliam*diasDoAno;
+	var diasRafael = idadeRafael*diasDoAno;
+	var diasLina = idadeLina*diasDoAno;
+
+	var totalDias =
+		diasGuilherme + diasNahan + diasWilliam + diasRafael + diasLina;
+
+	var mediaDias = totalDias / 5;
+
+	var novaLinha = function(){
+		document.write("<br>");
+	}
+
+	var linha = function(){
+		document.write("<hr>")
+	}
+
+	var exibirTotais = function(){
+		linha();
+		document.write("Total de dias: " + totalDias);
+		novaLinha();
+		document.write("Média de dias: " + mediaDias);
+		linha();
+	}
+
+	var exibirAmigo = function(nome, idade, ano, diasDeVida){
+		document.write("Nome: " + nome + " - idade: " + idade + ",nasceu em: " + (ano - idade) + " e já viveu " + diasDeVida + " dias.");
+		novaLinha();
+	}
+
+	exibirAmigo("Guilherme Frota", idadeGuilherme, ano, diasGuilherme);
+	exibirAmigo("Nahan Frota", idadeNahan, ano, diasNahan);
+	exibirAmigo("Willliam Frota", idadeWilliam, ano, diasWilliam);
+	exibirAmigo("Rafael Ponte", idadeRafael, ano, diasRafael);
+	exibirAmigo("Lina Tarcia", idadeLina, ano, diasLina);
+
+	exibirTotais();
+</script>
+
+<!-- para otimizar nosso código e deixá-lo mais flexível vamos utilizar PARÂMETROS OU ARGUMENTOS, estes são valores que passamos dentro do parênteses da função function(AQUI){}. Dessa forma informamos que a função irá receber tal valor já descrito anteriormente (passagem de parâmetros).
+exemplo: 
+		var exibir = function(nome){
+			document.write("Nome: " + nome);
+		}
+
+		exibir("Tony");
+
+	Nome: Tony
+
+	outro exemplo:
+				var exibir = function(nom, idade){
+			document.write("Nome: " + nome + "idade: " + idade + " anos.");
+		}
+
+		exibir("Tony", 33);
+
+	Nome: Tony 33 anos.
+ -->

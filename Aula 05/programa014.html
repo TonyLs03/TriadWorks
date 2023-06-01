@@ -1,0 +1,109 @@
+<meta charset="UTF-8">
+<script>
+	var nomesIguais = function(){
+		var text1 = prompt("Digite o primeiro nome");
+		var text2 = prompt("Digite o segundo nome");
+
+		if(text1 == text2){
+			document.write("Os textos são iguais: " + text1);
+		}
+		if(text1 != text2){
+			document.write("Os textos são diferentes: " + text1 + " - " + text2);
+		}
+		if(text1.length > text2.length){
+			document.write("<br>O texto: " + text1 + " é maior que o segundo: " + text2);
+		}
+	}
+
+	nomesIguais();
+
+</script>
+
+<!-- 
+<hr>
+retirando um dos ifs
+basta usarmos o ELSE (se não em português)
+
+if(resposta){
+	console.log("Pegar o sapado e vá correr");
+} else {
+	console.log("Vá deitar na cama e durma");
+}
+
+dessa forma não usamos 2 ifs.
+<br>
+<hr>
+descobrindo o tamanho do texto
+length > tamanho/comprimento (o length que é propriedade dessa variável. Algumas
+variáveis possuem algumas propriedades, ações que o JavaScript nos deu.)
+ -->
+<script>
+	var nome = "Handerson Frota";
+		console.log("Tamanho da fonte: " + nome.length);	
+</script>
+
+<!-- 
+sabendo quem é maior e/ ou igual 
+o que já usamos:
+	== (igual)
+	!= (diferente)
+	< (menor que)
+	> (maior que)
+
+para usar 2 condições faremos da seguinte forma:
+if(texto.length <= texto2.length){
+	document.write("O texto 1 " + text + " é menor e igual ao texto 2 " + texto2);
+}
+if(texto.length >= texto2.length){
+	document.write("O texto 1 " + text + " é maior e igual ao texto 2 " + texto2);
+}
+
+	<= (menor igual)
+	>= (maior igual)
+<br>
+<hr>
+Duas ou mais condições na mesma pergunta.
+quando o else nao resolve utilizaremos operadores lógicos, que farão 2 testes distintos e a ação de um não depende do outro:
+
+E / &&
+OU / ||
+
+exemplo:
+
+var texto1 = "Handerson Frota";
+var texto2 = "Handerson B. Frota";
+
+if( (texto1.length == texto2.length) && (texto1 == texto2) ){
+	console.log("Os textos são exatamentes iguais.");
+
+para o IF funcionar aqui ambas as condições DEVEM ser verdadeiras(true)
+
+exemplo.2:
+
+var texto1 = "Handerson Frota";
+var texto2 = "Handerson B. Frota";
+
+if( (texto1.length == texto2.length) || (texto1 == texto2) ){
+	console.log("Os textos são exatamentes iguais.");
+}
+
+aqui tanto uma como a outra sendo verdadeiras o IF será executado.
+<br>
+<hr>
+
+TABELA VERDADE
+ 
+   A 			B 		 A E B 		  A OU B
+VERDADEIRO  VERDADEIRO 	VERDADEIRO 	VERDADEIRO
+FALSO		VERDADEIRO	FALSO 		VERDADEIRO
+VERDADEIRO  FALSO		FALSO 		VERDADEIRO
+FALSO		FALSO 		FALSO 		FALSO
+						A && B 		A || B
+
+   A 			B 		 A E B 		  A OU B
+2>1 		4>1 		VERDADEIRO 	VERDADEIRO
+3==2 		3==3 		FALSO 		VERDADEIRO
+4<6 		4<2 		FALSO 		VERDADEIRO
+4>10 		10==20 		FALSO 		FALSO
+						A && B 		A || B
+-->

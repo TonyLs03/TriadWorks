@@ -1,0 +1,32 @@
+<canvas id="maisCanvas" width="600" height="400"> </canvas>
+<script>
+	var tela = document.getElementById("maisCanvas");
+	var pincel = tela.getContext("2d");
+
+	pincel.fillStyle = "red";
+
+	pincel.strokeText(" <-- Borda Esquerda",10,200);
+	pincel.fillRect(0, 0, 1, 400);
+
+	pincel.strokeText("Borda Direita -->",510,200);
+	pincel.fillRect(599, 0, 600, 400);
+	
+	pincel.strokeText("Borda Superior",300,30);
+	pincel.fillRect(0, 0, 600, 1);
+	
+	pincel.strokeText("Borda Inferior",300,370);
+	pincel.fillRect(0, 399, 600, 400);
+
+	pincel.fillStyle = "black";
+	pincel.beginPath();
+	pincel.moveTo(300, 100);
+	pincel.lineTo(200, 280);
+	pincel.lineTo(400, 280);
+	pincel.fill();
+
+	pincel.fillStyle = "red";
+	// pincel.beginPath();
+	pincel.arc(330,210,150, 0, 2*Math.PI);
+	pincel.fill();
+	
+</script>

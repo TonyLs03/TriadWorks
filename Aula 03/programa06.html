@@ -1,0 +1,60 @@
+<meta charset="UTF-8">
+<script>
+	var ano = 2023;
+	var diasDoAno = 365;
+
+	var idadeGuilherme = 8;
+	var idadeNahan = 8;
+	var idadeWilliam = 3;
+	var idadeRafael = 31;
+	var idadeLina = 32;
+
+	var diasGuilherme = idadeGuilherme*diasDoAno;
+	var diasNahan = idadeNahan*diasDoAno;
+	var diasWilliam = idadeWilliam*diasDoAno;
+	var diasRafael = idadeRafael*diasDoAno;
+	var diasLina = idadeLina*diasDoAno;
+
+	var totalDias =
+		diasGuilherme + diasNahan + diasWilliam + diasRafael + diasLina;
+
+	var mediaDias = totalDias / 5;
+
+	document.write("Nome: Guilherme Frota - idade: " + idadeGuilherme + ", nasceu em: " + (ano - idadeGuilherme) + " e já viveu " + diasGuilherme + " dias.<br>");
+	document.write("Nome: Nahan Frota - idade: " + idadeNahan + ", nasceu em: " + (ano - idadeNahan) + " e já viveu " + diasNahan + " dias.<br>");
+	document.write("Nome: William Frota - idade: " + idadeWilliam + ", nasceu em: " + (ano - idadeWilliam) + " e já viveu " + diasWilliam + " dias.<br>");
+	document.write("Nome: Rafael Ponte - idade: " + idadeRafael + ", nasceu em: " + (ano - idadeRafael) + " e já viveu " + diasRafael + " dias.<br>");
+	document.write("Nome: Lina Tarcia - idade: " + idadeLina + ", nasceu em: " + (ano - idadeLina) + " e já viveu " + diasLina + " dias.<br>");
+	document.write("Total de dias: " + totalDias);
+	document.write("<br>Média de dias: " + mediaDias);
+</script>
+
+
+
+<!-- para evitar de estar repetindo o ano em toda linha, podemos criar uma varável atribuindo assim um valor a ela e deixando nosso código mais legível:
+
+var ano = 2023; <--- substituindo no código não precisamos sempre repetir o mesmo ano, e também para alterar basta digitar um novo valor diretamente na variável. assim também podemos fazer com dias do ano, total de dias e média de dias
+
+uma variável pode guardar qualquer valor: string(texto, seq. de caracteres), número, outro código, expressões matemáticas, etc.
+
+var ano = 2015; <--- estamnos declarando a variável ano sem aspas
+document.write(ano); <-- V correto
+document.write("ano"); <-- X errado
+
+Resultado:
+2015 <-- V
+ano <-- X
+
+obs.: quando colocamos aspas na variável o JavaScript trata como se fosse uma sequência de caracteres, como um texto e impreme tudo o que tem dentro das aspas.
+
+Obs.:
+Case-sensitive
+Case-sensitive é um termo que se refere a um tipo de análise tipográfica da informática. É quando
+queremos dizer que o “texto” é "sensível ao tamanho das letras” ou "sensível a maiúsculas e minús-
+culas”.
+Diz-se que um software é case-sensitive ou possui “case sensitivity” quando ele é capaz de
+analisar uma cadeia de caracteres, avaliar a existência de caixa alta(MAIÚSCULAS) e caixa
+baixa(MINÚSCULAS).
+O palavra triadworks é DIFERENTE de TRIADWORKS ou TriadWorks.
+
+ -->

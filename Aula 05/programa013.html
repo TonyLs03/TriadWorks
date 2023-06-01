@@ -1,0 +1,88 @@
+
+<meta charset="UTF-8">
+<script>
+	var qualMaior = function(){
+		var x = parseInt(prompt("Digite o primeiro valor"));
+		var y = parseInt(prompt("Digite o segundo valor"));
+
+		if(x > y){
+			document.write("O primeiro valor é MAIOR: " + x);
+		}
+		if(x < y){
+			document.write("O segundo valor é MAIOR: " + y);
+		}
+	}
+
+	qualMaior();
+</script>
+
+<!-- Tomada de decisão
+
+em determinadas situações em nossas vidas, dependendo da resposta nos levará a um tipo diferente de ação! Na programação também existe isso, se fizéssemos a seguinte pergunta: vou treinar hoje? duas possíveis respostas vem a mente: SIM OU NÃO. se sim, pegue o sapato e vá treinar, se não, deite e vá assistir filme. 
+
+cada resposta leva sua ação, estruturando isso seria como:
+
+se "eu responder SIM"
+	"Pegar o sapato e vá treinar."
+
+se "eu responder NÃO"
+	"Vá deitar e assistir filme."
+
+em programação usaremos o IF(SE em português)
+exemplo:
+
+if("eu responder SIM"){
+	console.log("Pegar o sapato e vá treinar");
+}
+
+if("eu responder NÃO"){
+	console.log("Vá deitar e assistir filme");
+}
+
+IF só aceita um tipo de resposta, SIM ou NÃO, na programação vamos chamar de true e false (valor booleano, boolean)
+
+if(true){
+	console.log("egar o sapato e vá treinar");
+}
+
+if(false){
+	console.log("Vá deitar e assistir filme");
+}
+
+o if só vai ser executado se o IF for TRUE, mas como o segundo IF irá funcionar ? 
+
+
+
+var resposta = false;
+
+if(resposta){
+	console.log("Pegar o sapato e vá treinar");
+}
+
+if(resposta == false){
+	console.log("Vá deitar e assistir filme");
+}
+
+para saber se é igual usamos > ==
+para saber se é diferente usamos > !=
+
+var texto1 = "Azul";
+var texto2 = "OtherName";
+
+if(texto1 != texto2){
+	console.log("Sim, os textos são diferentes");
+}
+
+<hr>
+testando algo maior e menor!
+
+var idade1 = prompt("Idade da primeira pessoa?");
+var idade2 = prompt("Idade da segunda pessoa?");
+
+if(parseInt(idade1) < parseInt(idade2)){
+	console.log("A primeira pessoa é mais nova;");
+}
+if(parseInt(idade1) > parseInt(idade2)){
+	console.log("A primeira pessoa é mais velha;");
+}
+ -->

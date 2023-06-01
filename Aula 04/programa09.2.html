@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<script>
+	var valorGasolina = prompt("Qual o valor da gasolina?");
+	var capacidadeTanque = prompt("Qual a capacidade do tanque?");
+	var percorreu = prompt("Quanto você percorreu?");
+
+	var custoEncherTanque = function(){
+		return valorGasolina * custoEncherTanque;
+	}
+
+	var quilometroPorLitro = function(){
+		return percorreu / capacidadeTanque;
+	}
+
+	var novaLinha = function(){
+		document.write("<br>");
+	}
+
+	document.write("Valor da gasolina: R$ " + valorGasolina);
+	novaLinha();
+
+	document.write("Capacidade do tanque: " + capacidadeTanque + " litros.");
+	novaLinha();
+
+	document.write("Total percorrido: " + percorreu + " Km");
+	novaLinha();
+
+	document.write("Quilômetro por litro: " + quilometroPorLitro() + " por litro");
+	novaLinha();
+
+</script>

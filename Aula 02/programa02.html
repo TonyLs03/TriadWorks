@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+
+<script>
+	document.write("Olá, meu nome é " + "Tony Lima e tenho " + 33 + " anos de idade.<br>");
+	document.write("Cargo: Estagiário<br>");
+	document.write("Ano de nascimento: 1990<br>");
+	document.write("Casado<br>");
+	document.write("Gosto de: Animes, bike etc...");
+</script>
+
+<!-- quando usamos um valor entre aspas estamos trabalhando com uma sequência de caracteres, mesmo colocando números eles continuam agindo como uma sequência de caracteres: 
+
+document.write("Nasci na data: " + "26" + "1998");
+O resultado deve ser = "Nasci na data: 261998”.
+
+isso acontece pois ainda estamo trabalhando com uma sequência de caracteres, para executar alguma operação matemática devemos adicionar o valor sem as aspas:
+
+document.write("Nasci na data: " + 26 + 1998);
+Resultado deve ser = "Nasci na data: 2024”.
+
+assim somando números e não apenas concatenando.]
+ -->
+
+<h3>descobrindo nossa idade pelo ano de nascimento:</h3>
+
+<script>
+	document.write("Minha idade é: " + (2023 - 1990));
+</script>
+
+<!-- se não usarmos os parênteses estaremos concatenando o texto com números e o resultado será NaN (Not a number), para concatenar o texto com o resultado precisamos priorizar a opreção matemática passando ela entre parênteses -->
+
+<h1>descobrindo a média de idade entre nossos amigos</h1>
+
+<script>
+	document.write("Nossa média de idade é: " + (33+30+35+30) / 4);
+</script>

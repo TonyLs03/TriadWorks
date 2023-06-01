@@ -1,0 +1,150 @@
+### input
+
+até o momento não estamos fazendo comunicação entre o HTML e JavaScript, estamos usando o HTML apenas como base para usar o JavaScript, usando o prompt do JS para obter informações.
+iremos unir essas tecnologias a partir de agora, o prompt é usado para obter informações ao usuário, já sabemos disso (abrindo uma janela para o usuário entrar com dados e um botão para enviar a informação para a variável).
+
+var valor = prompt("Entre com a informação aqui.");
+
+no HTML temos algo semelhante, chamado de input, logo, se é HTML, então é uma tag (<input>). O input possui algumas propriedades, assim como algumas variáveis do JavaScript. Lembra da propriedade
+length?
+
+a) id: identificador do campo
+b) type: onde definimos qual o TIPO desse campo. Ex: Texto, Senha etc.
+c) value: o valor. Quando queremos carregar o input já exibindo algum valor de imediato usamos essa propriedade
+
+escrevendo o código > <input type="text" id="campoTexto" /> o HTML irá mostrar uma caixa de input para que o usuário escreva dados nela. 
+
+com isso já possuimos um campo que recebe a informação do usuário, basta agora criar um código que colete o valor dessas informações. (Para pegarmos esse valor precisamos entender que esse input faz parte do documento da página e temos no JavaScript um cara que representa esse documento, que é o document. Lembra que algumas variáveis do JavaScript possuem propriedades? Eles também possuem funções e é com ela que iremos pegar o valor que está no HTML.)
+
+A função que vamos usar será a getElemetById("id"), traduzindo fica: “Pegue o Elemento com o
+ID”
+var input = document.getElemtById("campoTexto")
+	console.log(input);
+	
+essa função vai buscar no documento(página), uma tag com o id chamado "campoTexto", exibindo o valor:
+	<input id="campoTexto" type="id">
+	
+ela irá retornar a tag em si e não o valor, pois estamos pedindo o ELEMENTO e não o valor, porém como sabemos JavaScript tem suas propriedades e usaremos uma para coletar o valor, usamos o value;
+
+var input = document.getElemtById("campoTexto")
+	console.log(input.value);
+	
+aqui conseguimos retornar o VALOR do elemento.
+
+porém pegar o valor não é o suficiente, precisamos adicionar uma ação, pra fazer isso vamos utilizar também um tipo de input, porem diferente, que será o SUBMIT, quando usado o HTML entende que isso é um botão e que irá executar alguma ação.
+
+<input type="submit" id="botao"/>
+
+para alterar o valor do botão vamos usar o value, como nada foi especifica, o boão vem por padrão do navegador, mas alterando fica: 
+
+<input type="submit" id="botao" value="Exibir"/>
+
+mesmo fazendo tudo isso ao clicar o botão não faz nada além de animar, isso porque não falamos a ele qual ação ele deve fazer. Utilizando o documet.getElementById() vamos pegar o "botao":
+
+var botao = document.getElementById("botao"); 
+
+Mas como sabemos, a variável botao é uma representação do elemento input do tipo submit. E sabemos
+também que ela possui uma propriedade. O que devemos fazer é adicionar uma ação neste elemento quando
+que será executada quando o usuário clicar no botão. Essa ação clicar é chamada de onclick que é a nossa
+propriedade.
+
+var botao = document.getElementById("botao");
+	botao.onClick = ???
+	
+(Mas qual ação quero executar ao clicar? Vamos criar uma função que irá pegar o valor digitado e exibi-lo no
+console.)
+
+var exibirValorDigitado = function(){
+	var input = document.getElementById("campoTexto");
+	console.log(input.value);
+	}
+	
+	Agora precisamos passar essa função para o onclick:
+	
+var exibirValorDigitado = function(){
+	var input = document.getElementById("campoTexto");
+	console.log(input.value);
+	}
+	
+	var botao = document.getElementById("botao");
+	botao.onclick = exibirValorDigitado;
+		
+### Estrutura de dados com Array
+
+várias vezes precisamos tabalhar com vários valores e pra isso criar várias variáveis, exemplo, idades de alunos:
+
+var idadeAluno1 = 20;
+var idadeAluno2 = 28;
+var idadeAluno3 = 27;
+var idadeAluno4 = 30;
+
+exibindo teremos que escrever:
+
+console.log("Idade do aluno: " + idadeAluno1);
+console.log("Idade do aluno: " + idadeAluno2);
+console.log("Idade do aluno: " + idadeAluno3);
+console.log("Idade do aluno: " + idadeAluno4);
+
+repetindo assim o código console.log para cada aluno, imagine ter que adicionar mais um ou retirar um aluno. 
+
+se tivesse uma forma de organizar em uma estrutura só, como um armário, ficaria mais organizado.
+
+e é pra isso que existe o array, que é um estrutura de dados onde podemos armazenar de uma forma organizada
+o que quisermos como um armário.
+
+para criar um array no JavaScript usamos os colchetes []
+criamos uma variável e o valor dele será atribuído dentro dos colchetes:
+
+var arrayIdades = [20, 28, 27, 30];
+
+cada valor antes da vírgula representa um valor na posição do array
+
+		   0   1   2   3  < posiçõpes/índices
+var arrayIdades = [20, 28, 27, 30];
+
+essas posições é o que chamamos de índices, e a contagem se inicia no 0 (zero) em JavaScript assim como em várias linguagens.
+
+usando o índice podemos acessar o valor que desejamos, apenas usando o número desejado da posição em colchetes, exemplo:
+	console.log(array[2]);
+
+resultado: 27
+
+evitando repetir código como antes, podemos fazer com array assim podendo percorrer toda a estrutura:
+
+var arrayIdades = [20, 28, 27, 30];
+
+for( var i=0; i<4 ; i++){
+	console.log("Idade do aluno: " + i + " : " + arrayIdades[i]);
+ }
+ 
+Temos 4 posições e iremos contar a partir do zero (0) até ele ser menor que 4 no caso a posição 3.
+O resultado será:
+
+Idade do aluno0: 20 ([0] posição 1)
+Idade do aluno1: 28 ([1] posição 2)
+Idade do aluno2: 27 ([2] posição 3)
+Idade do aluno3: 30 ([3] posição 4)
+
+nesse caso não é uma boa prática limitar o array dizendo a ele o tamanho que vai possuir, como estamos fazendo no for, pra evitar isso vamos utilizar o atributo length, ficará assim:
+
+var arrayIdades = [20, 28, 27, 30];
+
+for( var i=0; i<arrayIdades.length; i++){
+	console.log("Idade do aluno: " + i + " : " + arrayIdades[i]);
+}
+
+podemos adicionar o que desejarmos no nosso array, números, textos, etc. vamos a mais um exemplo:
+
+var arrayNomes = ["Ghilherme", "Nahan", "William", "Handerson"];
+
+for(var i=0; i<4; i++){
+	console.log("Nome: " + arrayNomes[i]);
+	}
+	
+	resultado:
+	
+	Nome: Ghilherme
+	Nome: Nahan
+	Nome: William
+	Nome: Handerson
+

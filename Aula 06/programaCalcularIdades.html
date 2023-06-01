@@ -1,0 +1,66 @@
+<meta charset="UTF-8">
+<script>
+	var diasDoAno = 365;
+
+	var diasAmigosSomatorio = 0;
+	var diasAmigo = 0;
+
+	var calculoTotalDeDias = function(){
+		diasAmigosSomatorio = diasAmigosSomatorio + diasAmigo;
+		return diasAmigosSomatorio;
+	}
+
+	var calculoMediaDeDias = function(){
+		return calculoTotalDeDias() / 5;
+	}
+
+	var novaLinha = function(){
+		document.write("<br>");
+	}
+
+	var linha = function(){
+		document.write("<hr>")
+	}
+
+	var exibirTotais = function(){
+		linha();
+		document.write("Total de dias: " + calculoTotalDeDias());
+		novaLinha();
+		document.write("Média de dias: " + calculoMediaDeDias());
+		linha();
+	}
+
+	  var exibirAmigo = function(nome, idade, ano, diasDeVida){
+		document.write("Nome: " + nome + 
+			" - idade: " + idade + 
+			", nasceu em: " + (ano - idade) + 
+			" e já viveu " + diasDeVida + " dias.");
+		novaLinha();
+	}
+
+	var executarPrograma = function(){
+		var qtdAmigos = prompt("Quantos amigos você quer calcular?");
+		var testaNumero = true;
+		while(testaNumero){
+			if(qtdAmigos == "" || qtdAmigos == 0 || isNaN(qtdAmigos)){
+				qtdAmigos = prompt("Não entendi. Quantos amigos mesmo?");
+				testaNumero = true;
+			}else{
+				testaNumero = false;
+			}
+		}
+		for(var x = 0; x < qtdAmigos; x++){
+			var nome = prompt("Qual o nome do seu amigo?");
+			var idade = prompt("Qual a idade dele?");
+			var ano = prompt("Em que ano estamos?");
+
+			diasAmigo = idade*diasDoAno;
+			exibirAmigo(nome, idade, ano, diasAmigo);
+
+		}
+		exibirTotais();
+	}
+
+	executarPrograma();
+
+</script>

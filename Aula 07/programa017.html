@@ -1,0 +1,16 @@
+<meta charset="UFT-8">
+
+digite o valor:
+<input type="text" id="campoTexto" />
+<input type="submit" id="botao" value="Exibir valor digitado" />
+
+<script>
+	var campoTexto = document.getElementById("campoTexto");
+
+	var exibirCampo = function(){
+		alert(campoTexto.value);
+	}
+
+	var botaoSelecionado = document.getElementBy("botao");
+	botaoSelecionado.onclick = exibirCampo;
+</script>

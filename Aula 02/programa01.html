@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<script>
+	document.write("Alterando a forma de exibir uma mensagem para o usuário<br>");
+	document.write("Bem <strong>melhor</strong> que um alert<br>");
+</script>
+
+<!-- tudo que se passa dentro das aspas são sequencias de caracteres, mesmo que adcionando numeros eles não se comportarão como números, pois estão dentro de aspas, não consequimos calcular, apenas concatenar: -->
+
+<script>
+	document.write("Quantos actions figures eu e meu amigo possuímos?<br>");
+	document.write("10" + "5<br>");
+</script>
+<!-- o resultado deve ser = 105  -->
+
+<!-- para se comportar como número devemos simplesmente escrever sem as aspas: -->
+
+<script>
+	document.write("Quantos actions figures eu e meu amigo possuímos?<br>");
+	document.write(10 + 5);
+</script>
+<!-- o resultado deve ser = 15
+
+obs.: Quando usamos entre uma sequência de caracteres o sinal +, estamos CONCATENANDO o texto, ou seja, estamos
+JUNTANDO uma sequência de caracteres com outra.
+-->

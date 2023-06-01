@@ -1,0 +1,72 @@
+### criando gráficos com CANVAS
+O elemento CANVAS
+Pela especificação o elemento canvas é basicamente:
+“Uma tela de btimap dependente de resolução que pode ser usada para a renderização de elementos gráficos ou
+outras imagens visuais rapidamente.” – W3C
+
+criando o primeiros CANVAS
+para criar vamos utilizar a tag html <canvas></canvas>
+
+a partir daí vamos definir 3 propriedades:
+
+a) id: identificador do canvas.
+b) width: a largura do canvas.
+c) height: altura do canvas.
+
+<canvas id="meuCanvas" width="600" height="400"> </canvas>
+
+getContext (função no elemento canvas)
+
+### Usando JavaScript no CANVAS
+
+faremos da seguinte forma, depois de declarar o elemento canvas no html, vamos utilizar
+JavaScript juntamente com o elemento input e buscar o id do canvas através do GetElementById
+
+<canvas id="meuCanvas" width="600" height="400"> </canvas>
+<script>
+var tela = document.getElementById("meuCanvas");
+</script>
+
+com isso temos uma representação do canvas em uma variável (tela), q é exatamente uma tela em branco, onde podemos usar por exemplo um pincel, que por sua vez, para representar o pincel, usaremos a variável:
+
+var pincel = tela.getContext("2D");
+
+antes de começar a pintar precisamos escolher a cor do pincel, utilizando a função fillStyle:
+
+pincel.fillStyle = "black";
+
+usando fillRect podemos desenhar um retângulo:
+pincel.fillRect(0, 0, 200, 400);
+
+o código final deve resultar em algo assim:
+	<meta charset="UTF-8">
+
+	<canvas id="meuCanvas" width="600" height="400"> </canvas>
+	<script>
+	var tela = document.getElementById("meuCanvas");
+	var pincel = tela.getContext("2d");
+
+	pincel.fillStyle = "black";
+	pincel.fillRect(0, 0, 200, 400);
+	</script>
+
+### entendendo melhor o CANVAS
+
+para adicionar um texto no canvas vamos usamos strokeText (porém não é um texto de verdade.)
+
+A função fillRect(x, y, width, height)
+
+x => A posição em que será iniciado o desenho da ESQUERDA para DIREITA.
+y => A posição em que será iniciado o desenho de CIMA para BAIXO.
+width => Largura do desenho.
+height => Altura do desenho.
+
+usando de funções em conjunto podemos desenhar um triângulo, através da função beginPath.
+
+
+
+
+
+
+
+

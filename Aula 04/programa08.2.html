@@ -1,0 +1,86 @@
+<meta charset="UTF-8">
+<script>
+	var diasDoAno = 365;
+
+	var calculoTotalDeDias = function(){
+		return diasGuilherme + diasNahan + diasWilliam + diasRafael + diasLina;
+	}
+
+	var calculoMediaDeDias = function(){
+		return calculoTotalDeDias() / 5;
+	}
+
+	var novaLinha = function(){
+		document.write("<br>");
+	}
+
+	var linha = function(){
+		document.write("<hr>")
+	}
+
+	var exibirTotais = function(){
+		linha();
+		document.write("Total de dias: " + calculototalDeDias());
+		novaLinha();
+		document.write("Média de dias: " + calculoMediaDeDias());
+		linha();
+	}
+
+	var exibirAmigo = function(nome, idade, ano, diasDeVida){
+		document.write("Nome: " + nome + " - idade: " + idade + ", nasceu em: " + (ano - idade) + " e já viveu " + diasDeVida + " dias.");
+		novaLinha();
+	}
+
+	var entradaGuilherme = function(){
+		var nome = prompt("Qual o nome do seu amigo?");
+		var idade = prompt("Qual a idade dele?");
+		var ano = prompt("Em que ano estamos?");
+		diasGuilherme = idade*diasDoAno;
+
+		exibirAmigo(nome, idade, ano, diasGuilherme);
+	}
+
+	var entradaNahan = function(){
+		var nome = prompt("Qual o nome do seu amigo?");
+		var idade = prompt("Qual a idade dele?");
+		var ano = prompt("Em que ano estamos?");
+		diasNahan = idade*diasDoAno;
+
+		exibirAmigo(nome, idade, ano, diasNahan);
+	}
+
+	var entradaWilliam = function(){
+		var nome = prompt("Qual o nome do seu amigo?");
+		var idade = prompt("Qual a idade dele?");
+		var ano = prompt("Em que ano estamos?");
+		diasWilliam = idade*diasDoAno;
+
+		exibirAmigo(nome, idade, ano, diasWilliam);
+	}
+
+	var entradaRafael = function(){
+		var nome = prompt("Qual o nome do seu amigo?");
+		var idade = prompt("Qual a idade dele?");
+		var ano = prompt("Em que ano estamos?");
+		diasRafael = idade*diasDoAno;
+
+		exibirAmigo(nome, idade, ano, diasRafael);
+	}
+
+	var entradaLina = function(){
+		var nome = prompt("Qual o nome do seu amigo?");
+		var idade = prompt("Qual a idade dele?");
+		var ano = prompt("Em que ano estamos?");
+		diasLina = idade*diasDoAno;
+
+		exibirAmigo(nome, idade, ano, diasLina);
+	}
+
+	entradaGuilherme();
+	entradaNahan();
+	entradaWilliam();
+	entradaRafael();
+	entradaLina();
+
+	exibirTotais();
+</script>

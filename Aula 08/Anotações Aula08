@@ -1,0 +1,40 @@
+Em qualquer linguagem devemos sempre ter a ideia de responsabilidade, em outras palavras manter sempre um padrão de organização!
+durante o curso usamos JavaScript dentro do HTML e isso não é uma boa prática.
+para fazer corretamente basta criar um arquivo JavaScript usando sua extensão, arquivo.js e adicionar no HTML, antes fizemos dessa forma:
+
+<script>
+   código JS aqui
+</script>
+
+alterando da maneira correta, fica:
+
+<script src="arquivo.js"></script>
+
+o resultado é o mesmo!
+
+obs.: os aquivos devem eestar na mesma pasta.
+obs.: usamos a propriedade da tag chamada src que quer dizer source (fonte).
+
+### outra maneira de criar função
+
+durante o curso utilizamos essa forma, porém é um mod simples de se fazer para melhor entendimento. uma variável seu nome e recebendo a função
+	var variavel = function(){
+	}
+
+	var novaLinha = function(){
+		document.write("<br>");
+	}
+
+outra forma seria a seguinte:
+
+	function novaLinha(){
+		document.write("<br>");
+	}
+
+dessa forma já declaramos que é uma função e por seguinte recebe seu nome e a continuação do código
+		
+		
+		
+		
+		
+	

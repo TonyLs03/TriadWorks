@@ -1,0 +1,67 @@
+<meta charset="UTF-8">
+<script>
+	var ano = 2023;
+	var diasDoAno = 365;
+
+	var idadeGuilherme = 8;
+	var idadeNahan = 8;
+	var idadeWilliam = 3;
+	var idadeRafael = 31;
+	var idadeLina = 32;
+
+	var diasGuilherme = idadeGuilherme*diasDoAno;
+	var diasNahan = idadeNahan*diasDoAno;
+	var diasWilliam = idadeWilliam*diasDoAno;
+	var diasRafael = idadeRafael*diasDoAno;
+	var diasLina = idadeLina*diasDoAno;
+
+	var totalDias =
+		diasGuilherme + diasNahan + diasWilliam + diasRafael + diasLina;
+
+	var mediaDias = totalDias / 5;
+
+	var novaLinha = function(){
+		document.write("<br>");
+	}
+
+	var linha = function(){
+		document.write("<hr>")
+	}
+
+	var exibirTotais = function(){
+		linha();
+		document.write("Total de dias: " + totalDias);
+		novaLinha();
+		document.write("Média de dias: " + mediaDias);
+		linha();
+	}
+
+	document.write("Nome: Guilherme Frota - idade: " + idadeGuilherme + ", nasceu em: " + (ano - idadeGuilherme) + " e já viveu " + diasGuilherme + " dias.");
+	novaLinha();
+	document.write("Nome: Nahan Frota - idade: " + idadeNahan + ", nasceu em: " + (ano - idadeNahan) + " e já viveu " + diasNahan + " dias.");
+	novaLinha();
+	document.write("Nome: William Frota - idade: " + idadeWilliam + ", nasceu em: " + (ano - idadeWilliam) + " e já viveu " + diasWilliam + " dias.");
+	novaLinha();
+	document.write("Nome: Rafael Ponte - idade: " + idadeRafael + ", nasceu em: " + (ano - idadeRafael) + " e já viveu " + diasRafael + " dias.");
+	novaLinha();
+	document.write("Nome: Lina Tarcia - idade: " + idadeLina + ", nasceu em: " + (ano - idadeLina) + " e já viveu " + diasLina + " dias.");
+	novaLinha();
+
+	exibirTotais();
+</script>
+
+
+<!-- para evitar mais repetição ed código podemos usar funções(function), elas podem ser guardadas em variáveis (lembre-se que var podem guardar qualquer valor). a função segue a estrutura function(){}, assim podemos executar uma função chamando ela no código e simplesmente irá funcionar, lembrando que também podemos colocar funções dentro de uma função, dessa forma alteramos apenas a função e não precisamos editar o que desejamos no código! 
+
+ex.:  var exibirTotais = function(){
+		linha();
+		document.write("Total de dias: " + totalDias);
+		novaLinha();
+		document.write("Média de dias: " + mediaDias);
+		linha();
+
+		a função que cria uma quebra de linha está dentro da função que exibe os totais, incrível
+
+		obs.: para chamar a função basta chamar ela escrevendo o nome dela juntamente com parênteses e ponto e vírgula --> ();
+		ex.:  novaLinha();
+ -->

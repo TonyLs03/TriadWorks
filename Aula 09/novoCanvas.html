@@ -1,0 +1,36 @@
+<canvas id="myCanvas" width="600" height="400"></canvas>
+<script>
+	var tela = document.getElementById("myCanvas");
+	var pincel = tela.getContext("2d");
+
+	pincel.fillStyle = "red";
+	
+	// Borda Esquerda
+	pincel.strokeText(" <-- B o r d a  E s q u e r d a",10,200);
+	pincel.fillRect(0,0,1,400);
+
+	// Borda Direita
+	pincel.strokeText("B o r d a  D i r e i t a -->",510,200);
+	pincel.fillRect(599,0,600,400);
+
+	// Borda Superior
+	pincel.strokeText("B o r d a  S u p e r i o r",300,30);
+	pincel.fillRect(0,0,600,1);
+
+	// Borda Inferior
+	pincel.strokeText("B o r d a  I n f e r i o r",300,370);
+	pincel.fillRect(0,399,600,400);
+
+	pincel.fillStyle = "blue";
+	pincel.beginPath();
+	pincel.moveTo(300,100);
+	pincel.lineTo(200,280);
+	pincel.lineTo(400,280);
+	pincel.fill();
+
+	pincel.fillStyle = "yellow";
+	// pincel.beginPath();
+	pincel.arc(330,210,150, 0, 2*Math.PI);
+	pincel.fill();
+
+</script>
